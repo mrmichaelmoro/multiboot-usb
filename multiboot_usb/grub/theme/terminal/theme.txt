@@ -1,0 +1,27 @@
+# multiboot-usb default theme
+desktop-image: "background.png"
+title-text: "multiboot-usb"
+
++ boot_menu {
+    left = 15%
+    top = 20%
+    width = 70%
+    height = 60%
+    item_font = "Unifont Regular 16"
+    item_color = "#cccccc"
+    selected_item_color = "#ffffff"
+    item_height = 30
+    item_padding = 10
+    icon_width = 24
+    icon_height = 24
+    item_icon_space = 8
+}
+
++ label {
+    top = 85%
+    left = 50%
+    text = "Use UP/DOWN to select, Enter to boot, 'e' to edit"
+    color = "#888888"
+    font = "Unifont Regular 14"
+    align = "center"
+}

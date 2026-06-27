@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multiboot-usb"
+version = "0.1.0"
+description = "Lightweight secure multi-ISO USB bootloader"
+requires-python = ">=3.12"
+dependencies = [
+    "cryptography>=41.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pyinstaller>=6.0"]
+
+[project.scripts]
+multiboot-usb = "multiboot_usb.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["multiboot_usb*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
