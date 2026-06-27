@@ -72,6 +72,7 @@ menuentry "Shutdown" --class halt { halt }
         return cfg
 
     def _generate_entry(self, meta: IsoMetadata) -> str:
+        """Generate a single menu entry for an ISO."""
         distro_key = meta.distro.lower()
         kernel, initrd, args = self.DISTRO_KERNEL_MAP.get(
             distro_key, ("isolinux/vmlinuz", "isolinux/initrd.img", "quiet")
