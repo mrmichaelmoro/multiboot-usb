@@ -1,0 +1,12 @@
+#!/bin/bash
+# Hook: runs at first boot to launch the multiboot-usb configuration TUI
+# This gets called from /etc/rc.local or a systemd service
+
+# Wait for system to settle
+sleep 3
+
+# Launch the TUI in the first terminal
+if [ -x /usr/local/bin/multiboot-usb-tui ]; then
+    # Run TUI on tty1
+    openvt -c 1 -f /usr/local/bin/multiboot-usb-tui &
+fi

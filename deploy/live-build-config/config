@@ -1,0 +1,31 @@
+lb config noauto \
+    --distribution bookworm \
+    --architecture amd64 \
+    --binary-images iso-hybrid \
+    --bootloader grub-efi \
+    --debian-installer none \
+    --desktop xfce \
+    --apt-indices false \
+    --firmware-chroot false \
+    --interactive disabled \
+    --linux-flavours amd64 \
+    --linux-packages "linux-image-${arch}" \
+    --memtest none \
+    --mirror-bootstrap http://deb.debian.org/debian \
+    --mirror-chroot http://deb.debian.org/debian \
+    --mirror-binary http://deb.debian.org/debian \
+    --mirror-binary-security http://deb.debian.org/debian-security \
+    --packages-lists "multiboot-usb" \
+    --security false \
+    --updates false \
+    --win32-loader false \
+    --archive-areas "main" \
+    --hostname multiboot-usb \
+    --username live \
+    --password live \
+    --timezone UTC \
+    --iso-application "multiboot-usb Live" \
+    --iso-preparer "Linus <jeeves.wooster.iii@gmail.com>" \
+    --iso-volume "multiboot-usb Live" \
+    --uefi-secure-boot auto \
+    --grub-multiple-menu true
