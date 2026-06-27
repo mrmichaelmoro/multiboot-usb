@@ -7,7 +7,7 @@ Lightweight, secure multi-ISO USB bootloader for Linux.
 - **3-partition layout**: EFI boot, modules/themes, ISO storage — all separate
 - **UEFI-first** with optional BIOS fallback
 - **Auto-discovery**: Drop an ISO on the storage partition, it appears in the boot menu
-- **Graphical GRUB menu** with distro icons
+- **Graphical GRUB menu** with icons (linux/windows/unknown for v1, extensible)
 - **Metadata editor** (GUI) for customizing boot entries
 - **ISO verification** via SHA256 sidecar files
 - **Secure Boot** support (MOK enrollment)
